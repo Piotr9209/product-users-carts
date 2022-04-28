@@ -1,4 +1,4 @@
-import { AllData } from "./components/allData/allData";
+import { AllData } from "./components/allData/AllData";
 
 function App() {
   return (
