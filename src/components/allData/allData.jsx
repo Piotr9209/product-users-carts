@@ -4,13 +4,11 @@ import { FurthestAwayFromEachOther } from "../furthestAwayFromEachOther/Furthest
 import { HighestValueCart } from "../highestValueCart/HighestValueCart";
 
 export const AllData = () => {
-  const [loading, setLoading] = useState(false);
   const [apiDataProducts, setApiDataProducts] = useState([]);
   const [apiDataCarts, setApiDataCarts] = useState([]);
   const [apiDataUsers, setApiDataUsers] = useState([]);
 
   const fetchData = async () => {
-    setLoading(true);
     const arrayData = [
       "https://fakestoreapi.com/products",
       "https://fakestoreapi.com/carts",
@@ -27,8 +25,7 @@ export const AllData = () => {
           setApiDataUsers(result[2])
         );
       })
-      .catch((err) => console.log(err))
-      .finally(() => setLoading(false));
+      .catch((err) => console.log(err));
   };
 
   useEffect(() => {

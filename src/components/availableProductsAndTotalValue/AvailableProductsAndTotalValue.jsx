@@ -24,7 +24,7 @@ export const AvailableProductsAndTotalValue = ({ products }) => {
           <div>
             <h1>
               All available product categories and the total value of products
-              of a given category
+              of a given category:
             </h1>
           </div>
           <div>

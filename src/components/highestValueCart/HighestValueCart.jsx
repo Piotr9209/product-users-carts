@@ -22,6 +22,7 @@ export const HighestValueCart = ({ products, carts, users }) => {
     }),
     {}
   );
+
   const calculatedCarts = carts
     .map((cart) => ({
       ...cart,
@@ -39,12 +40,17 @@ export const HighestValueCart = ({ products, carts, users }) => {
 
   return (
     <div>
+      <h1>Highest value cart:</h1>
       {products.length >= 1 && carts.length >= 1 && users.length >= 1 && (
         <div>
-          <h2>
-            Highest Value Cart: {calculatedCarts[0].cartValue}, user is:{" "}
-            {userNameById[calculatedCarts[0].userId]}
-          </h2>
+          <p>
+            <b>Highest Value Cart:</b>{" "}
+            <span>
+              {" "}
+              {calculatedCarts[0].cartValue}, user is:{" "}
+              {userNameById[calculatedCarts[0].userId]}
+            </span>
+          </p>
         </div>
       )}
     </div>
